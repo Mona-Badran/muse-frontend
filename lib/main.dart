@@ -9,7 +9,9 @@ class Muse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFFFEF7E6),
+      ),
       home: LoginPage(),
     );
   }
