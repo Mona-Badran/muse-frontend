@@ -17,6 +17,10 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: <Widget>[
               Button("LOGIN"),
+              SizedBox.fromSize(
+                size: Size(0, 16),
+              ),
+              Button("GET REGISTER"),
             ],
           ),
         ),
