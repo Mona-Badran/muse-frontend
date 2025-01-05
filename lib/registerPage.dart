@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 children: <Widget>[
                   InputBox(
                     hintText: 'Username',
-                    icon: Icons.person,
+                    icon: Icons.person_2_outlined,
                     obscureText: false,
                   ),
                   SizedBox(
@@ -46,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   InputBox(
                     hintText: 'Password',
-                    icon: Icons.lock,
+                    icon: Icons.lock_outline,
                     obscureText: false,
                   ),
                   SizedBox(
@@ -74,14 +74,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   if (isChecked) ...[
                     SizedBox(
-                      height: 40,
-                      child: Image(
-                        image: AssetImage('assets/images/Ellipse 1.png'),
-                      ),
+                      height: 15,
                     ),
                     InputBox(
                       hintText: 'Gallery Name',
-                      icon: Icons.person,
+                      icon: Icons.image_outlined,
                       obscureText: false,
                     ),
                   ],
