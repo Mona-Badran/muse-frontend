@@ -14,7 +14,9 @@ class _ButtonState extends State<Button> {
       onPressed: () {
         print("Login");
       },
-      child: Text("LOGIN"),
+      child: Center(
+          child: Text("LOGIN"),
+      ),
     );
   }
 }
