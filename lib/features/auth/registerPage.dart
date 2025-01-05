@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
-import 'inputBox.dart';
+import '../../shared/button.dart';
+import '../../shared/inputBox.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});

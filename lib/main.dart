@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'loginPage.dart';
-import 'registerPage.dart';
+import 'features/auth/loginPage.dart';
+import 'features/auth/registerPage.dart';
 
 void main() {
   runApp(const Muse());
