@@ -22,10 +22,16 @@ class _LoginPageState extends State<LoginPage> {
                 icon: Icons.person,
                 obscureText : false,
               ),
+              SizedBox(
+                height: 20,
+              ),
               InputBox(
                 hintText: 'Password',
                 icon: Icons.lock,
                 obscureText : false,
+              ),
+              SizedBox(
+                height: 20,
               ),
               Button("LOGIN"),
               SizedBox(
