@@ -14,6 +14,10 @@ class _ButtonState extends State<Button> {
       onPressed: () {
         print("Login");
       },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color(0xFF789495), // Background color
+        padding: EdgeInsets.symmetric(vertical: 16), // Full width height padding
+      ),
       child: Center(
           child: Text(
             "LOGIN",
