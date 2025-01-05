@@ -8,12 +8,11 @@ class Button extends StatefulWidget {
 }
 
 class _ButtonState extends State<Button> {
-  String buttonText = "";
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        print("Login");
+        print(widget.buttonText);
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: Color(0xFF789495), // Background color
@@ -26,7 +25,7 @@ class _ButtonState extends State<Button> {
       ),
       child: Center(
           child: Text(
-            "LOGIN",
+            widget.buttonText,
             style: TextStyle(
               color: Colors.white,
             ),
