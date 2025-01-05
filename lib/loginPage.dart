@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: false,
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   TextButton(
                     onPressed: () {},
