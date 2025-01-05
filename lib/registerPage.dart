@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     obscureText: false,
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Row(
                     children: <Widget>[
@@ -74,7 +74,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   if (isChecked) ...[
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     InputBox(
                       hintText: 'Gallery Name',
