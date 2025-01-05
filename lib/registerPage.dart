@@ -63,6 +63,11 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       Text(
                         "Gallery Owner",
+                        style: TextStyle(
+                          fontSize: 16, // Adjust font size
+                          fontFamily: 'Poppins', // Use your custom font
+                          color: Colors.black, // Text color
+                        ),
                       ),
                     ],
                   ),
