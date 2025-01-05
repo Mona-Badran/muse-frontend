@@ -16,7 +16,12 @@ class _ButtonState extends State<Button> {
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: Color(0xFF789495), // Background color
-        padding: EdgeInsets.symmetric(vertical: 16), // Full width height padding
+        padding: EdgeInsets.symmetric(vertical: 16),
+        textStyle: TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.bold, // Medium weight
+          fontSize: 24, // Font size
+        ),// Full width height padding
       ),
       child: Center(
           child: Text(
