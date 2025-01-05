@@ -23,6 +23,14 @@ class InputBox extends StatelessWidget {
             color: Colors.black87,
             fontFamily: 'Poppins',
           ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black87),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black87, width: 1),
+            borderRadius: BorderRadius.circular(10),
+          ),
         ),
     );
   }
