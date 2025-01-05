@@ -81,6 +81,17 @@ class _RegisterPageState extends State<RegisterPage> {
                       icon: Icons.image_outlined,
                       obscureText: false,
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    InputBox(
+                      hintText: 'Location',
+                      icon: Icons.location_on_outlined,
+                      obscureText: false,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
                   ],
                   Button("LOGIN"),
                   SizedBox(
