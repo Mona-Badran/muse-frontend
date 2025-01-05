@@ -54,7 +54,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   Row(
                     children: <Widget>[
-                      Checkbox(value: isChecked,
+                      Checkbox(
+                        value: isChecked,
                         onChanged: (bool? value) {
                           setState(() {
                             isChecked = value ?? false;
@@ -71,6 +72,19 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ],
                   ),
+                  if (isChecked) ...[
+                    SizedBox(
+                      height: 40,
+                      child: Image(
+                        image: AssetImage('assets/images/Ellipse 1.png'),
+                      ),
+                    ),
+                    InputBox(
+                      hintText: 'Gallery Name',
+                      icon: Icons.person,
+                      obscureText: false,
+                    ),
+                  ],
                   Button("LOGIN"),
                   SizedBox(
                     height: 40,
