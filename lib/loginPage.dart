@@ -50,6 +50,13 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: 20,
                   ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
                   Button("LOGIN"),
                   SizedBox(
                     height: 40,
