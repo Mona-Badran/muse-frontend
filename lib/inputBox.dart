@@ -18,6 +18,7 @@ class InputBox extends StatelessWidget {
       obscureText: obscureText,
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: Colors.black87),
+          hintText: hintText,
         ),
     );
   }
