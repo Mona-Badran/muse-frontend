@@ -17,8 +17,11 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: <Widget>[
               Button("LOGIN"),
-              SizedBox.fromSize(
-                size: Size(0, 16),
+              SizedBox(
+                height: 40,
+                child: Image(
+                  image: AssetImage('assets/images/Ellipse 1.png'),
+                ),
               ),
               Button("GET REGISTER"),
             ],
