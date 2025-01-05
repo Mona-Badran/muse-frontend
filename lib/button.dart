@@ -15,7 +15,12 @@ class _ButtonState extends State<Button> {
         print("Login");
       },
       child: Center(
-          child: Text("LOGIN"),
+          child: Text(
+            "LOGIN",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
       ),
     );
   }
