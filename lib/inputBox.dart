@@ -16,6 +16,9 @@ class InputBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       obscureText: obscureText,
+        decoration: InputDecoration(
+          prefixIcon: Icon(icon, color: Colors.black87),
+        ),
     );
   }
 }
