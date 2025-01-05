@@ -19,6 +19,10 @@ class InputBox extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: Colors.black87),
           hintText: hintText,
+          hintStyle: TextStyle(
+            color: Colors.black87,
+            fontFamily: 'Poppins',
+          ),
         ),
     );
   }
