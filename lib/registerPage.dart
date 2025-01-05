@@ -10,6 +10,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +51,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   SizedBox(
                     height: 20,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Checkbox(value: isChecked,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            isChecked = value ?? false;
+                          });
+                        },
+                      )
+                    ],
                   ),
                   Button("LOGIN"),
                   SizedBox(
