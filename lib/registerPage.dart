@@ -60,7 +60,10 @@ class _RegisterPageState extends State<RegisterPage> {
                             isChecked = value ?? false;
                           });
                         },
-                      )
+                      ),
+                      Text(
+                        "Gallery Owner",
+                      ),
                     ],
                   ),
                   Button("LOGIN"),
