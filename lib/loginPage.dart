@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                   TextButton(
                     onPressed: () {},
                     child: Align(
-                      alignment: Alignment.centerRight, // Align to the right
+                      alignment: Alignment.centerRight,
                       child: Text(
                         "Forgot Password?",
                         style: TextStyle(color: Colors.black),
