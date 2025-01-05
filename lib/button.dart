@@ -8,6 +8,7 @@ class Button extends StatefulWidget {
 }
 
 class _ButtonState extends State<Button> {
+  String buttonText = "";
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
