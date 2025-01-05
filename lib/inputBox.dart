@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class InputBox extends StatelessWidget {
-  const InputBox({super.key});
+
+  final String hintText;
+  final IconData icon;
+  final bool secureText;
+
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return TextField(
+    );
   }
 }
