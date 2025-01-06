@@ -22,15 +22,15 @@ class _ButtonState extends State<Button> {
           fontFamily: 'Poppins',
           fontWeight: FontWeight.bold, // Medium weight
           fontSize: 24, // Font size
-        ),// Full width height padding
+        ), // Full width height padding
       ),
       child: Center(
-          child: Text(
-            widget.buttonText,
-            style: TextStyle(
-              color: Colors.white,
-            ),
+        child: Text(
+          widget.buttonText,
+          style: TextStyle(
+            color: Colors.white,
           ),
+        ),
       ),
     );
   }
