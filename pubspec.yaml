@@ -1,5 +1,5 @@
-name: muse_frontend
-description: "A new Flutter project."
+name: muse
+description: "A mobile app making it easy to explore and learn about art. Using AI, Muse help in discovering the stories behind the art you love, whether it’s a painting, a sculpture, or a historic monument. Our goal is to bring art closer to everyone, making it fun, and engaging."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
