@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Button extends StatefulWidget {
   final String buttonText;
-  const Button(this.buttonText);
+  final Widget action;
+  const Button(this.buttonText, this.action);
 
   @override
   State<Button> createState() => _ButtonState();
