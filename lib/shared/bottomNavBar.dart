@@ -25,3 +25,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
+class MapPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text("Map Page"));
+  }
+}
