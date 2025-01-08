@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../shared/button.dart';
 import '../../shared/inputBox.dart';
+import 'registerPage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
