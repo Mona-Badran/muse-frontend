@@ -26,6 +26,13 @@ class SearchBar extends StatelessWidget {
           Icons.search,
           color: Colors.grey[600],
         ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: BorderSide(
+            color: Colors.grey,
+            width: 1,
+          ),
+        ),
       ),
     );
   }
