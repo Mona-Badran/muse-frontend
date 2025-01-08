@@ -13,6 +13,10 @@ class ArchImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const ClipRRect(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(100),
+      ),
+    );
   }
 }
