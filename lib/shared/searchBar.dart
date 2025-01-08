@@ -47,6 +47,11 @@ class SearchBar extends StatelessWidget {
           ),
         ),
       ),
+      style: TextStyle(
+        fontSize: 16,
+        fontFamily: 'Poppins',
+        color: Colors.black,
+      ),
     );
   }
 }
