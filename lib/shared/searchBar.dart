@@ -17,7 +17,12 @@ class SearchBar extends StatelessWidget {
     return TextField(
       controller: controller,
       onChanged: onChanged,
-
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: TextStyle(
+          color: Colors.grey[600],
+        ),
+      ),
     );
   }
 }
