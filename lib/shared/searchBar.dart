@@ -22,6 +22,10 @@ class SearchBar extends StatelessWidget {
         hintStyle: TextStyle(
           color: Colors.grey[600],
         ),
+        prefixIcon: Icon(
+          Icons.search,
+          color: Colors.grey[600],
+        ),
       ),
     );
   }
