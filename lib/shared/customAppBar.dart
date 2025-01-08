@@ -34,6 +34,9 @@ class CustomAppBar extends StatelessWidget {
               backgroundImage: avatarUrl != null
                   ? NetworkImage(avatarUrl!)
                   : null,
+              child: avatarUrl == null
+                  ? Icon(Icons.person, color: Colors.white)
+                  : null,
             ),
           ),
         ),
