@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../shared/button.dart';
 import '../../shared/inputBox.dart';
+import 'loginPage.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -93,14 +94,14 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 20,
                     ),
                   ],
-                  Button("LOGIN"),
+                  Button("LOGIN", LoginPage()),
                   SizedBox(
                     height: 40,
                     child: Image(
                       image: AssetImage('assets/images/Ellipse 1.png'),
                     ),
                   ),
-                  Button("GET REGISTER"),
+                  Button("GET REGISTER", LoginPage()),
                 ],
               ),
             ),

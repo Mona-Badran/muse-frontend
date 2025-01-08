@@ -61,14 +61,14 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  Button("LOGIN"),
+                  Button("LOGIN", RegisterPage()),
                   SizedBox(
                     height: 40,
                     child: Image(
                       image: AssetImage('assets/images/Ellipse 1.png'),
                     ),
                   ),
-                  Button("GET REGISTER"),
+                  Button("GET REGISTER", RegisterPage()),
                 ],
               ),
             ),
