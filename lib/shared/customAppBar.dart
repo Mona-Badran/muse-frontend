@@ -14,6 +14,9 @@ class CustomAppBar  extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const AppBar(
+      backgroundColor: Color(0xFFFEF7E6),
+      elevation: 0,
+    );
   }
 }
