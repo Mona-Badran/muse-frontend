@@ -39,6 +39,13 @@ class SearchBar extends StatelessWidget {
             width: 1,
           ),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: BorderSide(
+            color: Colors.grey,
+            width: 1.5,
+          ),
+        ),
       ),
     );
   }
