@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../features/auth/loginPage.dart';
 
 class Button extends StatefulWidget {
   final String buttonText;
@@ -14,7 +15,11 @@ class _ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        print(widget.buttonText);
+        // Navigate to Second Page
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => widget.action),
+        );
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: Color(0xFF789495), // Background color
