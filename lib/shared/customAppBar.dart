@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AppBar(
+    return AppBar(
       backgroundColor: Color(0xFFFEF7E6),
       elevation: 0,
       title: Text(
@@ -24,6 +24,20 @@ class CustomAppBar extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 16.0),
+          child: GestureDetector(
+            onTap: onAvatarTap,
+            child: CircleAvatar(
+              radius: 20,
+              backgroundImage: avatarUrl != null
+                  ? NetworkImage(avatarUrl!)
+                  : null,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
