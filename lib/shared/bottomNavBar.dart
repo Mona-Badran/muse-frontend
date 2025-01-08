@@ -38,3 +38,10 @@ class CapturePage extends StatelessWidget {
     return Center(child: Text("Capture Page"));
   }
 }
+
+class SettingsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text("Settings Page"));
+  }
+}
