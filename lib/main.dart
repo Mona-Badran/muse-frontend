@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'features/auth/loginPage.dart';
-import 'features/auth/registerPage.dart';
 
 void main() {
   runApp(const Muse());
@@ -22,7 +21,7 @@ class Muse extends StatelessWidget {
           ),
         ),
       ),
-      home: RegisterPage(),
+      home: LoginPage(),
     );
   }
 }
