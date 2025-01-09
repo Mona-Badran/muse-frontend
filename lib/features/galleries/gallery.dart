@@ -20,7 +20,13 @@ class GalleryDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: CustomAppBar(
+        title: name,
+        onAvatarTap: () {
+          print('Avatar tapped');
+        },
+        avatarUrl: null,
+      ),
     );
   }
 }
