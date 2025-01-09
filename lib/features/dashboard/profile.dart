@@ -16,8 +16,8 @@ class EditProfilePage extends StatelessWidget {
       appBar: CustomAppBar(
         title: "Profile",
         onAvatarTap: () {
-        print('Avatar tapped');
-      },
+          print('Avatar tapped');
+        },
         avatarUrl: null,
       ),
       body: SingleChildScrollView(
@@ -31,7 +31,8 @@ class EditProfilePage extends StatelessWidget {
                 },
                 child: CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage('assets/images/profile_placeholder.png'),
+                  backgroundImage:
+                      AssetImage('assets/images/profile_placeholder.png'),
                   child: Align(
                     alignment: Alignment.bottomRight,
                     child: CircleAvatar(
@@ -55,7 +56,8 @@ class EditProfilePage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: 16),              TextField(
+              const SizedBox(height: 16),
+              TextField(
                 controller: bioController,
                 decoration: const InputDecoration(
                   labelText: "Bio",
