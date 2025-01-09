@@ -22,7 +22,7 @@ class InputBox extends StatelessWidget {
     return TextField(
       controller: controller,
       obscureText: obscureText,
-
+      onChanged: onChanged,
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: Colors.black87),
           hintText: hintText,
