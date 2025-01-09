@@ -7,8 +7,8 @@ class ArchImage extends StatelessWidget {
 
   const ArchImage({
     required this.imagePath,
-    required this.width,
-    required this.height,
+    this.width = double.infinity,
+    this.height = 140,
   });
 
   @override
