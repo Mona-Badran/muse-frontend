@@ -51,7 +51,7 @@ class EditProfilePage extends StatelessWidget {
                 controller: nameController,
                 decoration: const InputDecoration(
                   labelText: "Name",
-                  prefixIcon: Icon(Icons.person),
+                  prefixIcon: Icon(Icons.person_2_outlined),
                   border: OutlineInputBorder(),
                 ),
               ),
