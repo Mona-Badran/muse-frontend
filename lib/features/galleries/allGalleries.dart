@@ -55,6 +55,9 @@ class AllGalleries extends StatelessWidget {
                 },
                 hintText: "Search for galleries"
             ),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),
