@@ -27,19 +27,15 @@ final List<Gallery> galleries = [
   ),
 ];
 
-class AllGalleries extends StatefulWidget {
+class AllGalleries extends StatelessWidget {
   const AllGalleries({super.key});
 
-  @override
-  State<AllGalleries> createState() => _AllGalleriesState();
-}
-
-class _AllGalleriesState extends State<AllGalleries> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
 }
+
 class Gallery {
   final String name;
   final String city;
