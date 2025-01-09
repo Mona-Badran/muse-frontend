@@ -1,5 +1,32 @@
 import 'package:flutter/material.dart';
 
+final List<Gallery> galleries = [
+  Gallery(
+    name: 'Museum Name',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery1.png',
+  ),
+  Gallery(
+    name: 'Museum Name',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery2.png',
+  ),
+  Gallery(
+    name: 'Museum Name',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery3.png',
+  ),
+  Gallery(
+    name: 'Museum Name',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery4.png',
+  ),
+];
+
 class AllGalleries extends StatefulWidget {
   const AllGalleries({super.key});
 
