@@ -36,8 +36,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
           showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.photo_library),
+              icon: Icon(Icons.photo_library_outlined),
               label: 'Galleries',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.pin_drop_outlined),
+              label: 'Map',
             ),
           ]),
     );
