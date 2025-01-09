@@ -55,7 +55,16 @@ class EditProfilePage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 16),              TextField(
+                controller: bioController,
+                decoration: const InputDecoration(
+                  labelText: "Bio",
+                  prefixIcon: Icon(Icons.info_outline),
+                  border: OutlineInputBorder(),
+                ),
+                maxLines: 3,
+              ),
+
             ],
           ),
         ),
