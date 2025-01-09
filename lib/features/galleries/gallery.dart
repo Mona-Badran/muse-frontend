@@ -31,13 +31,12 @@ class GalleryDetailsPage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Main gallery image
             ArchImage(
               imagePath: imagePath,
               width: double.infinity,
               height: 200,
             ),
-
+            const SizedBox(height: 16),
           ],
         ),
       ),
