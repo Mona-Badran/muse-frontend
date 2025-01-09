@@ -11,6 +11,32 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  void handleLogin() {
+    final username = usernameController.text;
+    final password = passwordController.text;
+
+    if (username.isEmpty || password.isEmpty) {
+      // Show an error message if fields are empty
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Please provide both username and password."),
+          backgroundColor: Colors.red,
+        ),
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CustomBottomNavBar(),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                     hintText: 'Username',
                     icon: Icons.person,
                     obscureText: false,
+                    controller: usernameController,
                   ),
                   SizedBox(
                     height: 20,
@@ -70,6 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                     hintText: 'Password',
                     icon: Icons.lock,
                     obscureText: false,
+                    controller: passwordController,
                   ),
                   SizedBox(
                     height: 15,
@@ -84,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  Button("LOGIN", CustomBottomNavBar()),
+                  Button("LOGIN", CustomBottomNavBar(), onPressed: handleLogin,),
                   SizedBox(
                     height: 40,
                     child: Image(
