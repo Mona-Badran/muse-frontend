@@ -58,6 +58,14 @@ class GalleryDetailsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
+            Text(
+              '$city - $country',
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.grey,
+                fontFamily: 'Poppins',
+              ),
+            ),
           ],
         ),
       ),
