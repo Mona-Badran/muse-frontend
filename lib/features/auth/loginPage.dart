@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../shared/customButton.dart';
 import '../../shared/customInputBox.dart';
+import '../../shared/customBottomNavBar.dart';
 import 'registerPage.dart';
 
 class LoginPage extends StatefulWidget {
@@ -35,6 +36,28 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundColor: Colors.grey[300],
+                    child: Icon(
+                      Icons.person,
+                      size: 50,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Log In",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   InputBox(
                     hintText: 'Username',
                     icon: Icons.person,
@@ -61,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  Button("LOGIN", RegisterPage()),
+                  Button("LOGIN", CustomBottomNavBar()),
                   SizedBox(
                     height: 40,
                     child: Image(
