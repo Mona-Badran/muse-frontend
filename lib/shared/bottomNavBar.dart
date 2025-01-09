@@ -32,6 +32,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           type: BottomNavigationBarType.fixed,
           backgroundColor: Color(0xFF749495),
           unselectedItemColor: Colors.white70,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.photo_library),
