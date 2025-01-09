@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../shared/button.dart';
-import '../../shared/inputBox.dart';
+import '../../shared/customButton.dart';
+import '../../shared/customInputBox.dart';
 import 'registerPage.dart';
 
 class LoginPage extends StatefulWidget {
