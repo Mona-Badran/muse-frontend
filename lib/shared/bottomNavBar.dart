@@ -51,6 +51,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(Icons.settings_outlined),
               label: 'Settings',
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
           ]),
     );
   }
