@@ -36,31 +36,26 @@ class AllGalleries extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
-        title: 'Galleries',
-        onAvatarTap: () {
-          print('Avatar tapped');
-        },
-        avatarUrl: null,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            CustomSearchBar(
-                controller: searchController,
-                onChanged: (query) {
-                  print('Search query: $query');
-                },
-                hintText: "Search for galleries"
-            ),
-            SizedBox(
-              height: 20,
-            ),
-          ],
+    return Column(
+      children: [
+        CustomAppBar(
+          title: 'Galleries',
+          onAvatarTap: () {
+            print('Avatar tapped');
+          },
+          avatarUrl: null,
         ),
-      ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: CustomSearchBar(
+            controller: searchController,
+            onChanged: (query) {
+              print('Search query: $query');
+            },
+            hintText: "Search for galleries",
+          ),
+        ),
+      ],
     );
   }
 }
