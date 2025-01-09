@@ -44,6 +44,16 @@ class AllGalleries extends StatelessWidget {
         },
         avatarUrl: null,
       ),
+      body: Column(
+        children: <Widget>[
+          CustomSearchBar(
+              controller: searchController,
+              onChanged: (query) {
+                print('Search query: $query');
+              },
+              hintText: "Search for galleries"),
+        ],
+      ),
     );
   }
 }
