@@ -27,6 +27,20 @@ class GalleryDetailsPage extends StatelessWidget {
         },
         avatarUrl: null,
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            // Main gallery image
+            ArchImage(
+              imagePath: imagePath,
+              width: double.infinity,
+              height: 200,
+            ),
+
+          ],
+        ),
+      ),
     );
   }
 }
