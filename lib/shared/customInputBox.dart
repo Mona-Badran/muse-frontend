@@ -6,10 +6,15 @@ class InputBox extends StatelessWidget {
   final IconData icon;
   final bool obscureText;
 
+  final TextEditingController? controller;
+  final ValueChanged<String>? onChanged;
+
   const InputBox({
     required this.hintText,
     required this.icon,
     required this.obscureText ,
+    this.controller,
+    this.onChanged,
   });
 
   @override
