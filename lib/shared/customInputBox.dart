@@ -20,7 +20,9 @@ class InputBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       obscureText: obscureText,
+
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: Colors.black87),
           hintText: hintText,
