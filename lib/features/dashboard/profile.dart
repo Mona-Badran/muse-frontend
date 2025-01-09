@@ -65,7 +65,7 @@ class EditProfilePage extends StatelessWidget {
                 maxLines: 3,
               ),
               const SizedBox(height: 16),
-
+              Button("Update Profile", CustomBottomNavBar()),
             ],
           ),
         ),
