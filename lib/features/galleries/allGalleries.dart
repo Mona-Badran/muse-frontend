@@ -3,6 +3,7 @@ import '../../shared/customSearchBar.dart';
 import '../../shared/customBottomNavBar.dart';
 import '../../shared/archImage.dart';
 import '../../shared/customAppBar.dart';
+import 'gallery.dart';
 
 final List<Gallery> galleries = [
   Gallery(
@@ -88,23 +89,38 @@ class AllGalleries extends StatelessWidget {
               itemCount: galleries.length,
               itemBuilder: (context, index) {
                 final gallery = galleries[index];
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Flexible (
-                      child: ArchImage(
-                        imagePath: gallery.imagePath,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GalleryDetailsPage(
+                          name: gallery.name,
+                          city: gallery.city,
+                          country: gallery.country,
+                          imagePath: gallery.imagePath,
+                        ),
                       ),
-                    ),
-                    Text(
-                      gallery.name,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins',
+                    );
+                  },
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Flexible (
+                        child: ArchImage(
+                          imagePath: gallery.imagePath,
+                        ),
                       ),
-                    ),
-                  ],
+                      Text(
+                        gallery.name,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
