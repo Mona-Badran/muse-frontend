@@ -76,6 +76,40 @@ class AllGalleries extends StatelessWidget {
             hintText: "Search for galleries",
           ),
         ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 20.0,
+                mainAxisSpacing: 10.0,
+              ),
+              itemCount: galleries.length,
+              itemBuilder: (context, index) {
+                final gallery = galleries[index];
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Flexible (
+                      child: ArchImage(
+                        imagePath: gallery.imagePath,
+                      ),
+                    ),
+                    Text(
+                      gallery.name,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
       ],
     );
   }
