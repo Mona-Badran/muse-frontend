@@ -43,6 +43,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(Icons.pin_drop_outlined),
               label: 'Map',
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.camera_alt_outlined),
+              label: 'Capture',
+            ),
           ]),
     );
   }
