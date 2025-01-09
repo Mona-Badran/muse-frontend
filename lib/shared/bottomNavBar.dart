@@ -47,6 +47,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(Icons.camera_alt_outlined),
               label: 'Capture',
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings_outlined),
+              label: 'Settings',
+            ),
           ]),
     );
   }
