@@ -31,6 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Color(0xFF749495),
+
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.photo_library),
