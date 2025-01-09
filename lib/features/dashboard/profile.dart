@@ -55,7 +55,7 @@ class EditProfilePage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
               ),
-
+              const SizedBox(height: 16),
             ],
           ),
         ),
