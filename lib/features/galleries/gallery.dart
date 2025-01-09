@@ -37,6 +37,18 @@ class GalleryDetailsPage extends StatelessWidget {
               height: 200,
             ),
             const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: List.generate(
+                4, // Show 4 small images (you can adjust)
+                    (index) => ArchImage(
+                  imagePath: imagePath, // Use the same image for demonstration
+                  width: 60,
+                  height: 60,
+                ),
+              ),
+            ),
+
           ],
         ),
       ),
