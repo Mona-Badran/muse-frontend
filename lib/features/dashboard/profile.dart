@@ -47,6 +47,14 @@ class EditProfilePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
+              TextField(
+                controller: nameController,
+                decoration: const InputDecoration(
+                  labelText: "Name",
+                  prefixIcon: Icon(Icons.person),
+                  border: OutlineInputBorder(),
+                ),
+              ),
 
             ],
           ),
