@@ -37,7 +37,13 @@ class AllGalleries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: CustomAppBar(
+        title: 'Galleries',
+        onAvatarTap: () {
+          print('Avatar tapped');
+        },
+        avatarUrl: null,
+      ),
     );
   }
 }
