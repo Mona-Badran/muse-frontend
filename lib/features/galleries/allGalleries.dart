@@ -6,28 +6,49 @@ import '../../shared/customAppBar.dart';
 
 final List<Gallery> galleries = [
   Gallery(
-    name: 'Museum Name',
+    name: 'Canvas4',
     city: 'City',
     country: 'Country',
     imagePath: 'assets/images/gallery1.png',
   ),
   Gallery(
-    name: 'Museum Name',
+    name: 'Gallery IV',
     city: 'City',
     country: 'Country',
     imagePath: 'assets/images/gallery2.png',
   ),
   Gallery(
-    name: 'Museum Name',
+    name: 'The Fourth Wall',
     city: 'City',
     country: 'Country',
     imagePath: 'assets/images/gallery3.png',
   ),
   Gallery(
-    name: 'Museum Name',
+    name: 'Quadro',
     city: 'City',
     country: 'Country',
     imagePath: 'assets/images/gallery4.png',
+  ),
+  Gallery(
+    name: 'Canvas4',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery1.png',
+  ),Gallery(
+    name: 'Canvas4',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery1.png',
+  ),Gallery(
+    name: 'Canvas4',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery1.png',
+  ),Gallery(
+    name: 'Canvas4',
+    city: 'City',
+    country: 'Country',
+    imagePath: 'assets/images/gallery1.png',
   ),
 ];
 
