@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   final String title;
   final VoidCallback onAvatarTap;
   final String? avatarUrl;
@@ -43,4 +43,5 @@ class CustomAppBar extends StatelessWidget {
       ],
     );
   }
+  Size get preferredSize => const Size.fromHeight(56.0);
 }
