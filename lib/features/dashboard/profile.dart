@@ -11,6 +11,15 @@ class EditProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      resizeToAvoidBottomInset: true,
+      appBar: CustomAppBar(
+        title: "Profile",
+        onAvatarTap: () {
+        print('Avatar tapped');
+      },
+        avatarUrl: null,
+      ),
+    );
   }
 }
