@@ -46,6 +46,8 @@ class EditProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 16),
+
             ],
           ),
         ),
