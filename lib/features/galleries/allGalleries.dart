@@ -28,11 +28,13 @@ final List<Gallery> galleries = [
 ];
 
 class AllGalleries extends StatelessWidget {
-  const AllGalleries({super.key});
+  final TextEditingController searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+
+    );
   }
 }
 
