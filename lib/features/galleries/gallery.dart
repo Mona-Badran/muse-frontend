@@ -48,7 +48,7 @@ class GalleryDetailsPage extends StatelessWidget {
                 ),
               ),
             ),
-
+            const SizedBox(height: 16),
           ],
         ),
       ),
