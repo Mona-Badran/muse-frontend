@@ -13,3 +13,16 @@ class _AllGalleriesState extends State<AllGalleries> {
     return const Placeholder();
   }
 }
+class Gallery {
+  final String name;
+  final String city;
+  final String country;
+  final String imagePath;
+
+  Gallery({
+    required this.name,
+    required this.city,
+    required this.country,
+    required this.imagePath,
+  });
+}
