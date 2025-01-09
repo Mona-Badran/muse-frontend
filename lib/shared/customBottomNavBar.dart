@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../features/galleries/allGalleries.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+class CustomBottomNavBar extends StatefulWidget {
+  const CustomBottomNavBar({super.key});
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
+  State<CustomBottomNavBar> createState() => _CustomBottomNavBarState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     AllGalleries(),
