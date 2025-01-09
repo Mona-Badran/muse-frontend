@@ -73,6 +73,7 @@ class GalleryDetailsPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 16),
+            Button("Events", Events()),
           ],
         ),
       ),
