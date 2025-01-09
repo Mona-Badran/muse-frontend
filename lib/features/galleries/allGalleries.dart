@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../shared/searchBar.dart';
+import '../../shared/bottomNavBar.dart';
+import '../../shared/archImage.dart';
+import '../../shared/customAppBar.dart';
 
 final List<Gallery> galleries = [
   Gallery(
