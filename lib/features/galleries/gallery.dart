@@ -57,7 +57,7 @@ class GalleryDetailsPage extends StatelessWidget {
                 fontFamily: 'Poppins',
               ),
             ),
-
+            const SizedBox(height: 8),
           ],
         ),
       ),
