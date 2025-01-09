@@ -20,6 +20,36 @@ class EditProfilePage extends StatelessWidget {
       },
         avatarUrl: null,
       ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  print("Change profile picture tapped!");
+                },
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/profile_placeholder.png'),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey[300],
+                      radius: 15,
+                      child: Icon(
+                        Icons.camera_alt_outlined,
+                        size: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
