@@ -37,6 +37,28 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundColor: Colors.grey[300],
+                    child: Icon(
+                      Icons.person,
+                      size: 50,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Register",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   InputBox(
                     hintText: 'Username',
                     icon: Icons.person_2_outlined,
@@ -94,14 +116,14 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 20,
                     ),
                   ],
-                  Button("LOGIN", LoginPage()),
+                  Button("REGISTER", LoginPage()),
                   SizedBox(
                     height: 40,
                     child: Image(
                       image: AssetImage('assets/images/Ellipse 1.png'),
                     ),
                   ),
-                  Button("GET REGISTER", LoginPage()),
+                  Button("BACK TO LOGIN", LoginPage()),
                 ],
               ),
             ),
