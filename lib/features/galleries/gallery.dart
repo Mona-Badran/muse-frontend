@@ -67,6 +67,11 @@ class GalleryDetailsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
+            const Text(
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              style: TextStyle(fontSize: 14, fontFamily: 'Poppins'),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
