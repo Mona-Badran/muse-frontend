@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../features/galleries/allGalleries.dart';
+import '../features/dashboard/profile.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
@@ -15,7 +16,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     MapPage(),
     CapturePage(),
     SettingsPage(),
-    ProfilePage(),
+    EditProfilePage(),
   ];
 
   @override
