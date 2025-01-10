@@ -116,14 +116,30 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 20,
                     ),
                   ],
-                  Button("REGISTER", LoginPage()),
+                  Button(
+                    "REGISTER",
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                  ),
                   SizedBox(
                     height: 40,
                     child: Image(
                       image: AssetImage('assets/images/Ellipse 1.png'),
                     ),
                   ),
-                  Button("BACK TO LOGIN", LoginPage()),
+                  Button(
+                    "BACK TO LOGIN",
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
