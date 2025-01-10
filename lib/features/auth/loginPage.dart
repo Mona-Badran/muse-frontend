@@ -57,70 +57,89 @@ class _LoginPageState extends State<LoginPage> {
                 fit: BoxFit.none,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.grey[300],
-                    child: Icon(
-                      Icons.person,
-                      size: 50,
-                      color: Colors.black,
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.1, // Add spacing dynamically
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    "Log In",
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  InputBox(
-                    hintText: 'Username',
-                    icon: Icons.person,
-                    obscureText: false,
-                    controller: usernameController,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  InputBox(
-                    hintText: 'Password',
-                    icon: Icons.lock,
-                    obscureText: false,
-                    controller: passwordController,
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(color: Colors.black),
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.grey[300],
+                      child: Icon(
+                        Icons.person,
+                        size: 50,
+                        color: Colors.black,
                       ),
                     ),
-                  ),
-                  Button("LOGIN", CustomBottomNavBar(), onPressed: handleLogin,),
-                  SizedBox(
-                    height: 40,
-                    child: Image(
-                      image: AssetImage('assets/images/Ellipse 1.png'),
+                    SizedBox(
+                      height: 20,
                     ),
-                  ),
-                  Button("GET REGISTER", RegisterPage()),
-                ],
+                    Text(
+                      "Log In",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    InputBox(
+                      hintText: 'Username',
+                      icon: Icons.person_2_outlined,
+                      obscureText: false,
+                      controller: usernameController,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    InputBox(
+                      hintText: 'Password',
+                      icon: Icons.lock_outline,
+                      obscureText: true,
+                      controller: passwordController,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          "Forgot Password?",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                    ),
+                    Button(
+                      "LOGIN",
+                      onPressed: handleLogin,
+                    ),
+                    SizedBox(
+                      height: 40,
+                      child: Image(
+                        image: AssetImage('assets/images/Ellipse 1.png'),
+                      ),
+                    ),
+                    Button(
+                      "GET REGISTER",
+                      onPressed:() {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.2, // Add spacing dynamically
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
