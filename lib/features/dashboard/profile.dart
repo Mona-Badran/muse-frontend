@@ -67,7 +67,16 @@ class EditProfilePage extends StatelessWidget {
                 maxLines: 3,
               ),
               const SizedBox(height: 16),
-              Button("Update Profile", CustomBottomNavBar()),
+              Button(
+                "Update Profile",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CustomBottomNavBar()),
+                  );
+                },
+              ),
             ],
           ),
         ),
