@@ -41,7 +41,7 @@ class GalleryDetailsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: List.generate(
                 4, // Show 4 small images (you can adjust)
-                    (index) => ArchImage(
+                (index) => ArchImage(
                   imagePath: imagePath, // Use the same image for demonstration
                   width: 60,
                   height: 60,
@@ -73,13 +73,22 @@ class GalleryDetailsPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 16),
-            Button("Events", Events()),
+            Button(
+              "Events",
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Events()),
+                );
+              },
+            ),
           ],
         ),
       ),
     );
   }
 }
+
 class Events extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
