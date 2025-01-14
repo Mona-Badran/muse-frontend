@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../features/galleries/allGalleries.dart';
 import '../features/dashboard/profile.dart';
+import '../features/dashboard/settings.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
@@ -75,12 +76,6 @@ class CapturePage extends StatelessWidget {
   }
 }
 
-class SettingsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text("Settings Page"));
-  }
-}
 
 class ProfilePage extends StatelessWidget {
   @override
