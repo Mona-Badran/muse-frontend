@@ -6,8 +6,7 @@ class Onboarding1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Stack(
+      body: Stack(
         children: <Widget>[
           Positioned.fill(
             child: Image.asset(
@@ -31,7 +30,7 @@ class Onboarding1 extends StatelessWidget {
             ),
           ),
         ],
-      )),
+      ),
     );
   }
 }
