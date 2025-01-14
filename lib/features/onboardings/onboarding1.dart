@@ -42,18 +42,23 @@ class Onboarding1 extends StatelessWidget {
                   topRight: Radius.circular(60),
                 ),
               ),
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    'Explore the world of art and culture',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins',
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Explore the world of art and culture',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: 'Poppins',
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
