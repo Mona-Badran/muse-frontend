@@ -15,6 +15,16 @@ class Onboarding1 extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+
+          Positioned(
+            top: 100,
+            right: 40,
+            child: Image.asset(
+              'assets/images/tower.png',
+              width: 150,
+            ),
+          ),
+
         ],
       )),
     );
