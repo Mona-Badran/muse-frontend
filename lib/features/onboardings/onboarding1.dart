@@ -17,20 +17,17 @@ class Onboarding1 extends StatelessWidget {
           ),
 
           Positioned(
-            top: 100,
-            right: 40,
-            child: Image.asset(
-              'assets/images/tower.png',
-              width: 150,
-            ),
-          ),
-
-          Positioned(
-            bottom: 150,
-            left: 40,
-            child: Image.asset(
-              'assets/images/girl.png',
-              width: 120,
+            bottom: 0,
+            child: Container(
+              height: 250,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Color(0xFF789495),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(60),
+                  topRight: Radius.circular(60),
+                ),
+              ),
             ),
           ),
         ],
