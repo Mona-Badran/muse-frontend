@@ -41,24 +41,24 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: Image(
-                image: AssetImage('assets/images/Vector.png'),
-                fit: BoxFit.cover,
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Image(
+                  image: AssetImage('assets/images/Vector.png'),
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              child: Image(
-                image: AssetImage('assets/images/Ellipse.png'),
-                fit: BoxFit.none,
+              Positioned(
+                bottom: 0,
+                left: 0,
+                child: Image(
+                  image: AssetImage('assets/images/Ellipse.png'),
+                  fit: BoxFit.none,
+                ),
               ),
-            ),
-            SingleChildScrollView(
-              child: Padding(
+              Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -141,8 +141,8 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
