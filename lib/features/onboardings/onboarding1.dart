@@ -25,6 +25,14 @@ class Onboarding1 extends StatelessWidget {
             ),
           ),
 
+          Positioned(
+            bottom: 150,
+            left: 40,
+            child: Image.asset(
+              'assets/images/girl.png',
+              width: 120,
+            ),
+          ),
         ],
       )),
     );
