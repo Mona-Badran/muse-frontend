@@ -15,13 +15,13 @@ class _ButtonState extends State<Button> {
     return ElevatedButton(
       onPressed: widget.onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xFF789495), // Background color
+        backgroundColor: Color(0xFF789495),
         padding: EdgeInsets.symmetric(vertical: 16),
         textStyle: TextStyle(
           fontFamily: 'Poppins',
-          fontWeight: FontWeight.bold, // Medium weight
-          fontSize: 24, // Font size
-        ), // Full width height padding
+          fontWeight: FontWeight.bold,
+          fontSize: 24,
+        ),
       ),
       child: Center(
         child: Text(
