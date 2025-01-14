@@ -8,7 +8,14 @@ class Onboarding1 extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Stack(
-        children: <Widget>[],
+        children: <Widget>[
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/background_shape.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
       )),
     );
   }
