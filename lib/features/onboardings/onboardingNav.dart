@@ -26,7 +26,7 @@ class _OnboardingNavState extends State<OnboardingNav> {
     },
     {
       'page': Onboarding3(),
-      'text': 'Visit online Galleries',
+      'text': 'Welcome to our online Galleries',
       'buttonAction': () => null,
     },
   ];
@@ -78,13 +78,14 @@ class _OnboardingNavState extends State<OnboardingNav> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.normal,
                   fontFamily: 'Poppins',
                 ),
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Row(children: currentPage()),
                   IconButton(
