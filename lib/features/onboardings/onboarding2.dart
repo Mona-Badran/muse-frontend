@@ -5,6 +5,10 @@ class Onboarding2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Stack(
+      children: [
+
+      ],
+    );
   }
 }
