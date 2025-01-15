@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'onboarding1.dart';
 
 class OnboardingNav extends StatefulWidget {
   const OnboardingNav({super.key});
