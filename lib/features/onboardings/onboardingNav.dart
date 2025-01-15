@@ -16,7 +16,7 @@ class _OnboardingNavState extends State<OnboardingNav> {
     {
       'page': Onboarding1(),
       'text': 'Explore the world of art and culture',
-      'buttonAction': () => null, // Add custom actions here
+      'buttonAction': () => null,
     },
     {
       'page': Onboarding2(),
@@ -41,42 +41,49 @@ class _OnboardingNavState extends State<OnboardingNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          _pages[_currentIndex]['page'],
-          Positioned(
-            bottom: 0,
-            child: Container(
-              height: 250,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Color(0xFF789495),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(60),
-                  topRight: Radius.circular(60),
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      _pages[_currentIndex]['text'],
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: 'Poppins',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+      body: _pages[_currentIndex]['page'],
+      bottomSheet: Container(
+        height: 250,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: Color(0xFF789495),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
           ),
-        ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                _pages[_currentIndex]['text'],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.normal,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    onPressed: () => null,
+                    icon: Icon(Icons.circle, color: Colors.white),
+                  ),
+                  IconButton(
+                    onPressed: _nextPage,
+                    icon: Icon(Icons.arrow_forward, color: Colors.white),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
