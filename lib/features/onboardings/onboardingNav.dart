@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'onboarding1.dart';
 import 'onboarding2.dart';
 import 'onboarding3.dart';
+import '../auth/loginPage.dart';
 
 class OnboardingNav extends StatefulWidget {
   const OnboardingNav({super.key});
@@ -34,6 +35,11 @@ class _OnboardingNavState extends State<OnboardingNav> {
     setState(() {
       if (_currentIndex < _pages.length - 1) {
         _currentIndex++;
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => LoginPage()),
+        );
       }
     });
   }
@@ -41,7 +47,7 @@ class _OnboardingNavState extends State<OnboardingNav> {
   List<Widget> currentPage() {
     return List<Widget>.generate(
       _pages.length,
-          (index) => Icon(
+      (index) => Icon(
         index == _currentIndex ? Icons.circle : Icons.circle_outlined,
         color: Colors.white,
       ),
