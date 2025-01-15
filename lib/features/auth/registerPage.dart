@@ -38,12 +38,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.grey[300],
-                    child: Icon(
-                      Icons.person,
-                      size: 50,
-                      color: Colors.black,
+                    radius: 50,
+                    backgroundColor: Colors.transparent,
+                    child: Image(
+                      image: AssetImage('assets/images/musec.png'),
                     ),
                   ),
                   SizedBox(
