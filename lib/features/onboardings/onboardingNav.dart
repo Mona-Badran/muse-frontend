@@ -62,7 +62,7 @@ class _OnboardingNavState extends State<OnboardingNav> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Explore the world of art and culture',
+                      _pages[_currentIndex]['text'],
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
