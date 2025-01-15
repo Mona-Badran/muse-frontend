@@ -14,11 +14,19 @@ class Onboarding3 extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: 200,
+          bottom: 190,
           right: 20,
           child: Image.asset(
             'assets/images/boy.png',
             width: 170,
+          ),
+        ),
+        Positioned(
+          bottom: 70,
+          left: 20,
+          child: Image.asset(
+            'assets/images/sculpture.png',
+            width: 140,
           ),
         ),
       ],
