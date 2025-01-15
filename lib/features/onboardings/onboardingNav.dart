@@ -30,6 +30,14 @@ class _OnboardingNavState extends State<OnboardingNav> {
     },
   ];
 
+  void _nextPage() {
+    setState(() {
+      if (_currentIndex < _pages.length - 1) {
+        _currentIndex++;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
