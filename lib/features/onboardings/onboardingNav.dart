@@ -38,6 +38,24 @@ class _OnboardingNavState extends State<OnboardingNav> {
     });
   }
 
+  // List<Widget> currentPage = [];
+  // void checkPage(bool Onboarding1){
+  //   if (_pages[_currentIndex]['page'] == Onboarding1) {
+  //     currentPage.add(Icon(Icons.circle, color: Colors.white));
+  //   } else {
+  //     currentPage.add(Icon(Icons.circle_outlined, color: Colors.white));
+  //   }
+  // }
+  List<Widget> currentPage() {
+    return List<Widget>.generate(
+      _pages.length,
+          (index) => Icon(
+        index == _currentIndex ? Icons.circle : Icons.circle_outlined,
+        color: Colors.white,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,10 +89,8 @@ class _OnboardingNavState extends State<OnboardingNav> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    onPressed: () => null,
-                    icon: Icon(Icons.circle, color: Colors.white),
-                  ),
+                  Row(children: currentPage()),
+
                   IconButton(
                     onPressed: _nextPage,
                     icon: Icon(Icons.arrow_forward, color: Colors.white),
