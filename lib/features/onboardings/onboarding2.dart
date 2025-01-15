@@ -15,10 +15,18 @@ class Onboarding2 extends StatelessWidget {
         ),
         Positioned(
           top: 70,
-          right: 0,
+          right: 10,
           child: Image.asset(
             'assets/images/Frame.png',
-            width: 200,
+            width: 180,
+          ),
+        ),
+        Positioned(
+          bottom: 150,
+          left: 30,
+          child: Image.asset(
+            'assets/images/man.png',
+            width: 300,
           ),
         ),
       ],
