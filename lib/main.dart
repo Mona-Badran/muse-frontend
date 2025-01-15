@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/auth/loginPage.dart';
+import 'package:muse/features/onboardings/onboardingNav.dart';
 
 void main() {
   runApp(const Muse());
@@ -21,7 +21,7 @@ class Muse extends StatelessWidget {
           ),
         ),
       ),
-      home: LoginPage(),
+      home: OnboardingNav(),
     );
   }
 }
