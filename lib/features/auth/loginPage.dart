@@ -67,10 +67,10 @@ class _LoginPageState extends State<LoginPage> {
                       height: MediaQuery.of(context).size.height * 0.1, // Add spacing dynamically
                     ),
                     CircleAvatar(
-                      radius: 40,
+                      radius: 50,
                       backgroundColor: Colors.transparent,
                       child: Image(
-                        image: AssetImage('assets/images/muse.png'),
+                        image: AssetImage('assets/images/musec.png'),
                       ),
                     ),
                     SizedBox(
