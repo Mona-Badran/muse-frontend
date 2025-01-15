@@ -26,7 +26,7 @@ class _OnboardingNavState extends State<OnboardingNav> {
     },
     {
       'page': Onboarding3(),
-      'text': 'Welcome to our online Galleries',
+      'text': 'Your portal to online Galleries',
       'buttonAction': () => null,
     },
   ];
