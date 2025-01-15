@@ -68,18 +68,16 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     CircleAvatar(
                       radius: 40,
-                      backgroundColor: Colors.grey[300],
-                      child: Icon(
-                        Icons.person,
-                        size: 50,
-                        color: Colors.black,
+                      backgroundColor: Colors.transparent,
+                      child: Image(
+                        image: AssetImage('assets/images/muse.png'),
                       ),
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      "Log In",
+                      "Login",
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
