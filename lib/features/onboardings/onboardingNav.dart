@@ -8,6 +8,12 @@ class OnboardingNav extends StatefulWidget {
 }
 
 class _OnboardingNavState extends State<OnboardingNav> {
+  int _currentIndex = 0;
+  final List<Widget> _pages = [
+    Onboarding1(),
+    Onboarding2(),
+    Onboarding3(),
+  ];
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
