@@ -13,6 +13,14 @@ class Onboarding3 extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
+        Positioned(
+          bottom: 200,
+          right: 20,
+          child: Image.asset(
+            'assets/images/boy.png',
+            width: 170,
+          ),
+        ),
       ],
     );
   }
