@@ -3,6 +3,9 @@ import '../../shared/customButton.dart';
 import '../../shared/customInputBox.dart';
 import '../../shared/customBottomNavBar.dart';
 import 'registerPage.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import '../../config.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -125,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Button(
-                      "GET REGISTER",
+                      "REGISTER",
                       onPressed:() {
                       Navigator.push(
                         context,
