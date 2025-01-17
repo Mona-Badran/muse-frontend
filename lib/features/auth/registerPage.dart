@@ -135,7 +135,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   InputBox(
                     hintText: 'Password',
                     icon: Icons.lock_outline,
-                    obscureText: false,
+                    obscureText: true,
                   ),
                   SizedBox(
                     height: 10,
