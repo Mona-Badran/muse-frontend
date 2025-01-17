@@ -38,7 +38,17 @@ class _RegisterPageState extends State<RegisterPage> {
     }
 
     try {
-      
+      final url = Uri.parse('$BASE_URL/auth/register');
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'username': username,
+          'password': password,
+          if (isChecked) 'galleryName': galleryName,
+          if (isChecked) 'location': location,
+        }),
+      );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
