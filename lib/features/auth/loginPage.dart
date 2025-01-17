@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  void handleLogin() {
+  void handleLogin() async {
     final username = usernameController.text;
     final password = passwordController.text;
 
