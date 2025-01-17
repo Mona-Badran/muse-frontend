@@ -21,6 +21,10 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController galleryNameController = TextEditingController();
   final TextEditingController locationController = TextEditingController();
 
+  void handleRegister() async {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
