@@ -26,6 +26,16 @@ class _RegisterPageState extends State<RegisterPage> {
     final password = passwordController.text;
     final galleryName = isChecked ? galleryNameController.text : null;
     final location = isChecked ? locationController.text : null;
+
+    if (username.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Username and Password are required."),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return;
+    }
   }
 
   @override
