@@ -22,7 +22,10 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController locationController = TextEditingController();
 
   void handleRegister() async {
-
+    final username = usernameController.text;
+    final password = passwordController.text;
+    final galleryName = isChecked ? galleryNameController.text : null;
+    final location = isChecked ? locationController.text : null;
   }
 
   @override
