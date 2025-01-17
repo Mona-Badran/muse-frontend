@@ -36,6 +36,17 @@ class _RegisterPageState extends State<RegisterPage> {
       );
       return;
     }
+
+    try {
+      
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("An error occurred: $e"),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
   }
 
   @override
