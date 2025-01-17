@@ -30,14 +30,26 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: Colors.red,
         ),
       );
-    } else {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => CustomBottomNavBar(),
+      return;
+    }
+    try{
+
+    }catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("An error occurred: $e"),
+          backgroundColor: Colors.red,
         ),
       );
     }
+    // else {
+    //   Navigator.push(
+    //     context,
+    //     MaterialPageRoute(
+    //       builder: (context) => CustomBottomNavBar(),
+    //     ),
+    //   );
+    // }
   }
 
   @override
