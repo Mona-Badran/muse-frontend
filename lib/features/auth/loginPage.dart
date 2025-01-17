@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
     }
     try{
       final url = Uri.parse('$BASE_URL/auth/login');
+      final response = await http.post(
         url,
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
@@ -42,6 +43,29 @@ class _LoginPageState extends State<LoginPage> {
         }),
       );
 
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Login successful!"),
+            backgroundColor: Colors.green,
+          ),
+        );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CustomBottomNavBar()),
+        );
+      }
+      else {
+        final error = jsonDecode(response.body)['error'] ?? 'Unknown error';
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Login failed: $error"),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     }catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -50,14 +74,6 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     }
-    // else {
-    //   Navigator.push(
-    //     context,
-    //     MaterialPageRoute(
-    //       builder: (context) => CustomBottomNavBar(),
-    //     ),
-    //   );
-    // }
   }
 
   @override
