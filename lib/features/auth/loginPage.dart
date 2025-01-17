@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
     }catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("An error occurred: $e"),
+          content: Text("Incorrect Credentials: $e"),
           backgroundColor: Colors.red,
         ),
       );
