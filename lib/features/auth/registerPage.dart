@@ -15,6 +15,12 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   bool isChecked = false;
+
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController galleryNameController = TextEditingController();
+  final TextEditingController locationController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
