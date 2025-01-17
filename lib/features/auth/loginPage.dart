@@ -33,6 +33,14 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
     try{
+      final url = Uri.parse('$BASE_URL/auth/login');
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'username': username,
+          'password': password,
+        }),
+      );
 
     }catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
