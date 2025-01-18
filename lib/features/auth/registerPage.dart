@@ -85,7 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        // child: SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Stack(
             children: [
               Positioned.fill(
@@ -129,6 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     InputBox(
                       hintText: 'Username',
+                      controller: usernameController,
                       icon: Icons.person_2_outlined,
                       obscureText: false,
                     ),
@@ -137,6 +138,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     InputBox(
                       hintText: 'Password',
+                      controller: passwordController,
                       icon: Icons.lock_outline,
                       obscureText: true,
                     ),
@@ -156,9 +158,9 @@ class _RegisterPageState extends State<RegisterPage> {
                         Text(
                           "Gallery Owner",
                           style: TextStyle(
-                            fontSize: 16, // Adjust font size
-                            fontFamily: 'Poppins', // Use your custom font
-                            color: Colors.black, // Text color
+                            fontSize: 16,
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
                           ),
                         ),
                       ],
@@ -169,6 +171,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       InputBox(
                         hintText: 'Gallery Name',
+                        controller: galleryNameController,
                         icon: Icons.image_outlined,
                         obscureText: false,
                       ),
@@ -177,6 +180,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       InputBox(
                         hintText: 'Description',
+                        controller: descriptionController,
                         icon: Icons.description_outlined,
                         obscureText: false,
                       ),
@@ -208,7 +212,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ],
           ),
-        // ),
+        ),
       ),
     );
   }
