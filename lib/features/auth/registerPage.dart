@@ -16,6 +16,9 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   bool isChecked = false;
 
+  final int normalUser = 1;
+  final int galleryOwner = 2;
+
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController galleryNameController = TextEditingController();
@@ -24,7 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
   void handleRegister() async {
     final username = usernameController.text;
     final password = passwordController.text;
-    final user_type_id = isChecked ? 2 : 1;
+    final userTypeId = isChecked ? galleryOwner : normalUser;
     final galleryName = isChecked ? galleryNameController.text : null;
     final description = isChecked ? descriptionController.text : null;
 
@@ -46,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
         body: jsonEncode({
           'username': username,
           'password': password,
-          'user_type_id': user_type_id,
+          'user_type_id': userTypeId,
           if (isChecked) 'galleryName': galleryName,
           if (isChecked) 'description': description,
         }),
