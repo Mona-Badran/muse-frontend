@@ -3,6 +3,8 @@ import '../../shared/customSearchBar.dart';
 import '../../shared/archImage.dart';
 import '../../shared/customAppBar.dart';
 import 'gallery.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 final List<Gallery> galleries = [
   Gallery(
