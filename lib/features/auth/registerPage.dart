@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
           'username': username,
           'password': password,
           'user_type_id': userTypeId,
-          if (isChecked) 'galleryName': galleryName,
+          if (isChecked) 'name': galleryName,
           if (isChecked) 'description': description,
         }),
       );
