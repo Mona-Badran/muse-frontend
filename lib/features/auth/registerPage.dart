@@ -24,6 +24,7 @@ class _RegisterPageState extends State<RegisterPage> {
   void handleRegister() async {
     final username = usernameController.text;
     final password = passwordController.text;
+    final user_type_id = isChecked ? 2 : 1;
     final galleryName = isChecked ? galleryNameController.text : null;
     final description = isChecked ? descriptionController.text : null;
 
@@ -45,6 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
         body: jsonEncode({
           'username': username,
           'password': password,
+          'user_type_id': user_type_id,
           if (isChecked) 'galleryName': galleryName,
           if (isChecked) 'description': description,
         }),
