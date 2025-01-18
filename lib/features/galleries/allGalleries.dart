@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../shared/customSearchBar.dart';
-import '../../shared/customBottomNavBar.dart';
 import '../../shared/archImage.dart';
 import '../../shared/customAppBar.dart';
 import 'gallery.dart';
