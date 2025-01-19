@@ -66,6 +66,51 @@ class _AllGalleriesState extends State<AllGalleries> {
     }
   }
 
+  Future<void> searchGalleries(String query) async {
+    setState(() {
+      isLoading = true;
+    });
+
+    try {
+      final url = Uri.parse('$BASE_URL/search?search=$query');
+      final response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        setState(() {
+          galleries = jsonDecode(response.body);
+        });
+      } else if (response.statusCode == 404) {
+        setState(() {
+          galleries = [];
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("No galleries found for \"$query\"."),
+            backgroundColor: Colors.red,
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Failed to search galleries: ${response.statusCode}"),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } catch (error) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Error searching galleries: $error"),
+          backgroundColor: Colors.red,
+        ),
+      );
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -88,7 +133,11 @@ class _AllGalleriesState extends State<AllGalleries> {
           child: CustomSearchBar(
             controller: searchController,
             onChanged: (query) {
-              fetchAllGalleries();
+              if (query.isEmpty) {
+                fetchAllGalleries();
+              } else {
+                searchGalleries(query);
+              }
             },
             hintText: "Search for galleries",
           ),
