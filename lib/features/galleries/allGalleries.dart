@@ -32,8 +32,9 @@ class _AllGalleriesState extends State<AllGalleries> {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         setState(() {
-          galleries = jsonDecode(response.body);        });
-      }else if (response.statusCode == 404) {
+          galleries = jsonDecode(response.body);
+        });
+      } else if (response.statusCode == 404) {
         setState(() {
           galleries = [];
         });
@@ -51,14 +52,14 @@ class _AllGalleriesState extends State<AllGalleries> {
           ),
         );
       }
-    } catch (e) {
+    } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text("Error fetching galleries: $e"),
+          content: Text("Error fetching galleries: $error"),
           backgroundColor: Colors.red,
         ),
       );
-    }finally {
+    } finally {
       setState(() {
         isLoading = false;
       });
@@ -68,7 +69,7 @@ class _AllGalleriesState extends State<AllGalleries> {
   @override
   void initState() {
     super.initState();
-    fetchGalleries('');
+    fetchAllGalleries();
   }
 
   @override
@@ -87,7 +88,7 @@ class _AllGalleriesState extends State<AllGalleries> {
           child: CustomSearchBar(
             controller: searchController,
             onChanged: (query) {
-              fetchGalleries(query);
+              fetchAllGalleries();
             },
             hintText: "Search for galleries",
           ),
