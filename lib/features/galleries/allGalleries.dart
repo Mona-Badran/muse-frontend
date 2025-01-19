@@ -18,6 +18,9 @@ class _AllGalleriesState extends State<AllGalleries> {
 
   final TextEditingController searchController = TextEditingController();
 
+  List<dynamic> galleries = [];
+  bool isLoading = false; // Loading state
+
   @override
   Widget build(BuildContext context) {
     return Column(
