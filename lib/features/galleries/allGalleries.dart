@@ -164,10 +164,8 @@ class _AllGalleriesState extends State<AllGalleries> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => GalleryDetailsPage(
-                                    name: gallery.name,
-                                    city: gallery.city,
-                                    country: gallery.country,
-                                    imagePath: gallery.imagePath,
+                                    name: gallery['name'],
+                                    imagePath: gallery['imagePath'],
                                   ),
                                 ),
                               );
