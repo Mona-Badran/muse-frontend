@@ -57,6 +57,12 @@ class _AllGalleriesState extends State<AllGalleries> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    fetchGalleries('');
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
