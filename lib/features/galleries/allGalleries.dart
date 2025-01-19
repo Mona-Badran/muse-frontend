@@ -19,6 +19,7 @@ class _AllGalleriesState extends State<AllGalleries> {
 
   List<dynamic> galleries = [];
   bool isLoading = false; // Loading state
+  bool hasError = false; // Error state
 
   void fetchGalleries(String query) async {
     setState(() {
