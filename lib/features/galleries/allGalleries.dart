@@ -78,7 +78,7 @@ class _AllGalleriesState extends State<AllGalleries> {
           child: CustomSearchBar(
             controller: searchController,
             onChanged: (query) {
-              print('Search query: $query');
+              fetchGalleries(query);
             },
             hintText: "Search for galleries",
           ),
