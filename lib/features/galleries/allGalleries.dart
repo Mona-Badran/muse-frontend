@@ -49,6 +49,10 @@ class _AllGalleriesState extends State<AllGalleries> {
           backgroundColor: Colors.red,
         ),
       );
+    }finally {
+      setState(() {
+        isLoading = false;
+      });
     }
   }
 
