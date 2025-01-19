@@ -6,54 +6,6 @@ import 'gallery.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-final List<Gallery> galleries = [
-  Gallery(
-    name: 'Canvas4',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery1.png',
-  ),
-  Gallery(
-    name: 'Gallery IV',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery2.png',
-  ),
-  Gallery(
-    name: 'The Fourth Wall',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery3.png',
-  ),
-  Gallery(
-    name: 'Quadro',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery4.png',
-  ),
-  Gallery(
-    name: 'Canvas4',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery1.png',
-  ),Gallery(
-    name: 'Canvas4',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery1.png',
-  ),Gallery(
-    name: 'Canvas4',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery1.png',
-  ),Gallery(
-    name: 'Canvas4',
-    city: 'City',
-    country: 'Country',
-    imagePath: 'assets/images/gallery1.png',
-  ),
-];
-
 class AllGalleries extends StatelessWidget {
   final TextEditingController searchController = TextEditingController();
 
@@ -130,18 +82,4 @@ class AllGalleries extends StatelessWidget {
       ],
     );
   }
-}
-
-class Gallery {
-  final String name;
-  final String city;
-  final String country;
-  final String imagePath;
-
-  Gallery({
-    required this.name,
-    required this.city,
-    required this.country,
-    required this.imagePath,
-  });
 }
