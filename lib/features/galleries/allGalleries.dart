@@ -15,6 +15,9 @@ class AllGalleries extends StatefulWidget {
 }
 
 class _AllGalleriesState extends State<AllGalleries> {
+
+  final TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(
