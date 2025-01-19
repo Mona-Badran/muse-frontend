@@ -21,6 +21,12 @@ class _AllGalleriesState extends State<AllGalleries> {
   List<dynamic> galleries = [];
   bool isLoading = false; // Loading state
 
+  void fetchGalleries(String query) async {
+    setState(() {
+      isLoading = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
