@@ -5,15 +5,11 @@ import '../../shared/customButton.dart';
 
 class GalleryDetailsPage extends StatelessWidget {
   final String name;
-  final String city;
-  final String country;
   final String imagePath;
 
   const GalleryDetailsPage({
     Key? key,
     required this.name,
-    required this.city,
-    required this.country,
     required this.imagePath,
   }) : super(key: key);
 
@@ -58,14 +54,6 @@ class GalleryDetailsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            Text(
-              '$city - $country',
-              style: const TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-                fontFamily: 'Poppins',
-              ),
-            ),
             const SizedBox(height: 16),
             const Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
