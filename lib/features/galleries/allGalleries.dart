@@ -34,6 +34,13 @@ class _AllGalleriesState extends State<AllGalleries> {
         setState(() {
           galleries = data;
         });
+      }else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Failed to load galleries: ${response.statusCode}"),
+            backgroundColor: Colors.red,
+          ),
+        );
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
