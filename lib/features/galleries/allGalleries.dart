@@ -19,26 +19,34 @@ class _AllGalleriesState extends State<AllGalleries> {
 
   List<dynamic> galleries = [];
   bool isLoading = false; // Loading state
-  bool hasError = false; // Error state
 
-  void fetchGalleries(String query) async {
+  Future<void> fetchAllGalleries() async {
     setState(() {
       isLoading = true;
     });
 
     try {
-      final url = Uri.parse('$BASE_URL/search?search=$query');
+      final url = Uri.parse('$BASE_URL/gallery');
       final response = await http.get(url);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         setState(() {
-          galleries = data;
+          galleries = jsonDecode(response.body);        });
+      }else if (response.statusCode == 404) {
+        setState(() {
+          galleries = [];
         });
-      }else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text("Failed to load galleries: ${response.statusCode}"),
+            content: Text("No galleries found."),
+            backgroundColor: Colors.red,
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Failed to fetch galleries: ${response.statusCode}"),
             backgroundColor: Colors.red,
           ),
         );
