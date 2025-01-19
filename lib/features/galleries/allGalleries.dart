@@ -175,11 +175,11 @@ class _AllGalleriesState extends State<AllGalleries> {
                               children: [
                                 Flexible(
                                   child: ArchImage(
-                                    imagePath: gallery.imagePath,
+                                    imagePath: gallery['imagePath'],
                                   ),
                                 ),
                                 Text(
-                                  gallery.name,
+                                  gallery['name'],
                                   style: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
