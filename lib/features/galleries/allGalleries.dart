@@ -25,6 +25,14 @@ class _AllGalleriesState extends State<AllGalleries> {
     setState(() {
       isLoading = true;
     });
+
+    try {} catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Error fetching galleries: $e"),
+          backgroundColor: Colors.red,
+        ),
+      );
   }
 
   @override
