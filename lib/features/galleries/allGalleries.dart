@@ -174,9 +174,28 @@ class _AllGalleriesState extends State<AllGalleries> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Flexible(
-                                  child: ArchImage(
-                                    imagePath: gallery['imagePath'],
-                                  ),
+                                  child: gallery['imagePath'] != null &&
+                                          gallery['imagePath'].isNotEmpty
+                                      ? ArchImage(
+                                          imagePath: gallery['imagePath'],
+                                        )
+                                      : ClipRRect(
+                                          borderRadius: BorderRadius.vertical(
+                                            top: Radius.circular(100),
+                                          ),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey[300],
+                                            ),
+                                            child: Center(
+                                              child: Icon(
+                                                Icons.image_rounded,
+                                                size: 50,
+                                                color: Colors.grey[700],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
                                 ),
                                 Text(
                                   gallery['name'],
