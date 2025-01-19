@@ -29,6 +29,12 @@ class _AllGalleriesState extends State<AllGalleries> {
       final url = Uri.parse('$BASE_URL/search?search=$query');
       final response = await http.get(url);
 
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        setState(() {
+          galleries = data;
+        });
+      }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
