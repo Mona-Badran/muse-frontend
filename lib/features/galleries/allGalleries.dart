@@ -72,7 +72,7 @@ class _AllGalleriesState extends State<AllGalleries> {
     });
 
     try {
-      final url = Uri.parse('$BASE_URL/search?search=$query');
+      final url = Uri.parse('$BASE_URL/gallery/search?search=$query');
       final response = await http.get(url);
 
       if (response.statusCode == 200) {
@@ -171,9 +171,9 @@ class _AllGalleriesState extends State<AllGalleries> {
                               );
                             },
                             child: Column(
-                              mainAxisSize: MainAxisSize.min,
                               children: [
-                                Flexible(
+                                SizedBox(
+                                  height: 135,
                                   child: gallery['imagePath'] != null &&
                                           gallery['imagePath'].isNotEmpty
                                       ? ArchImage(
@@ -197,6 +197,7 @@ class _AllGalleriesState extends State<AllGalleries> {
                                           ),
                                         ),
                                 ),
+                                SizedBox(height: 10),
                                 Text(
                                   gallery['name'],
                                   style: const TextStyle(
