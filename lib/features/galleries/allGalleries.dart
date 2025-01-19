@@ -143,53 +143,57 @@ class _AllGalleriesState extends State<AllGalleries> {
           ),
         ),
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 20.0,
-                mainAxisSpacing: 10.0,
-              ),
-              itemCount: galleries.length,
-              itemBuilder: (context, index) {
-                final gallery = galleries[index];
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => GalleryDetailsPage(
-                          name: gallery.name,
-                          city: gallery.city,
-                          country: gallery.country,
-                          imagePath: gallery.imagePath,
+          child: isLoading
+              ? Center(child: CircularProgressIndicator())
+              : galleries.isEmpty
+                  ? Center(child: Text("No galleries found"))
+                  : Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: GridView.builder(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 20.0,
+                          mainAxisSpacing: 10.0,
                         ),
+                        itemCount: galleries.length,
+                        itemBuilder: (context, index) {
+                          final gallery = galleries[index];
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => GalleryDetailsPage(
+                                    name: gallery.name,
+                                    city: gallery.city,
+                                    country: gallery.country,
+                                    imagePath: gallery.imagePath,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Flexible(
+                                  child: ArchImage(
+                                    imagePath: gallery.imagePath,
+                                  ),
+                                ),
+                                Text(
+                                  gallery.name,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
                       ),
-                    );
-                  },
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Flexible(
-                        child: ArchImage(
-                          imagePath: gallery.imagePath,
-                        ),
-                      ),
-                      Text(
-                        gallery.name,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins',
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+                    ),
         ),
       ],
     );
