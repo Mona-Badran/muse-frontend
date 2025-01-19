@@ -15,7 +15,6 @@ class AllGalleries extends StatefulWidget {
 }
 
 class _AllGalleriesState extends State<AllGalleries> {
-
   final TextEditingController searchController = TextEditingController();
 
   List<dynamic> galleries = [];
@@ -26,13 +25,18 @@ class _AllGalleriesState extends State<AllGalleries> {
       isLoading = true;
     });
 
-    try {} catch (e) {
+    try {
+      final url = Uri.parse('$BASE_URL/search?search=$query');
+      final response = await http.get(url);
+
+    } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text("Error fetching galleries: $e"),
           backgroundColor: Colors.red,
         ),
       );
+    }
   }
 
   @override
@@ -85,7 +89,7 @@ class _AllGalleriesState extends State<AllGalleries> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Flexible (
+                      Flexible(
                         child: ArchImage(
                           imagePath: gallery.imagePath,
                         ),
@@ -109,4 +113,3 @@ class _AllGalleriesState extends State<AllGalleries> {
     );
   }
 }
-
