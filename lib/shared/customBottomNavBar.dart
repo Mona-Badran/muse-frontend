@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muse/features/arts/cameraPage.dart';
 import '../features/galleries/allGalleries.dart';
 import '../features/dashboard/profile.dart';
 import '../features/dashboard/settings.dart';
@@ -15,7 +16,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   final List<Widget> _pages = [
     AllGalleries(),
     MapPage(),
-    CapturePage(),
+    CameraPage(),
     SettingsPage(),
     EditProfilePage(),
   ];
@@ -70,17 +71,3 @@ class MapPage extends StatelessWidget {
   }
 }
 
-class CapturePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text("Capture Page"));
-  }
-}
-
-
-class ProfilePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text("Profile Page"));
-  }
-}
