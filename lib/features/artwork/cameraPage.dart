@@ -70,7 +70,10 @@ class _CameraPageState extends State<CameraPage> {
           backgroundColor: Colors.red,
         ),
       );
-
+    }finally {
+      setState(() {
+        _isUploading = false;
+      });
     }
   }
 
