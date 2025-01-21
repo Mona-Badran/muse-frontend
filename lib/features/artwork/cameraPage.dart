@@ -15,6 +15,9 @@ class _CameraPageState extends State<CameraPage> {
   File? _selectedImage;
   bool _isUploading = false;
 
+  // Placeholder user ID
+  final int _userId = 1;
+
   @override
   void initState() {
     super.initState();
