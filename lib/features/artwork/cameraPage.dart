@@ -51,19 +51,29 @@ class _CameraPageState extends State<CameraPage> {
   Future<void> _uploadImage(File imageFile) async {
     var request = http.MultipartRequest(
       'POST',
-      Uri.parse('$BASE_URL/artwork/upload'),  // Replace with your actual backend URL
+      Uri.parse('$BASE_URL/artwork/upload'),
     );
 
-    request.files.add(
-      await http.MultipartFile.fromPath('image', imageFile.path),
-    );
+    request.files.add(await http.MultipartFile.fromPath('image', imageFile.path));
 
     try {
       var response = await request.send();
       if (response.statusCode == 200) {
-        print("Image uploaded successfully!");
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Image uploaded successfully!")),
+        final responseData = await http.Response.fromStream(response);
+        final Map<String, dynamic> responseJson = jsonDecode(responseData.body);
+
+        String imageUrl = responseJson['imageUrl'];
+        print("Image URL received: $imageUrl");
+
+        setState(() {
+          _selectedImage = null;
+        });
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Resultpage(imageUrl: imageUrl),
+          ),
         );
       } else {
         print("Image upload failed: ${response.statusCode}");
