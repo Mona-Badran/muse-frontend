@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muse/features/arts/cameraPage.dart';
+import 'package:muse/features/artwork/cameraPage.dart';
 import '../features/galleries/allGalleries.dart';
 import '../features/dashboard/profile.dart';
 import '../features/dashboard/settings.dart';
