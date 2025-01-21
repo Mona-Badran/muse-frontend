@@ -55,7 +55,14 @@ class _CameraPageState extends State<CameraPage> {
           ),
         );
       }
-
+      else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Upload failed: ${response.statusCode}"),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
