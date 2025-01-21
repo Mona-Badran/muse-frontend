@@ -18,12 +18,11 @@ class _CameraPageState extends State<CameraPage> {
   @override
   void initState() {
     super.initState();
-    _pickImageFromCamera();
+    _captureImage();
   }
 
-  Future _pickImageFromCamera() async {
-    final returnedImage =
-    await ImagePicker().pickImage(source: ImageSource.camera);
+  Future _captureImage() async {
+    final returnedImage = await ImagePicker().pickImage(source: ImageSource.camera);
 
     if (returnedImage == null) {
       return;
