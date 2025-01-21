@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
 
 class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
@@ -25,8 +26,10 @@ class _CameraPageState extends State<CameraPage> {
       return;
     }
 
+    final savedImagePath = await _saveImageLocally(File(returnedImage.path));
+
     setState(() {
-      _selectedImage = File(returnedImage.path);
+      _selectedImage  = File(savedImagePath);
     });
   }
 
