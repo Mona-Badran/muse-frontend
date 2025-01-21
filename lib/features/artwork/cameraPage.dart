@@ -83,9 +83,9 @@ class _CameraPageState extends State<CameraPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: _selectedImage != null
-            ? Image.file(_selectedImage!)
-            : CircularProgressIndicator(),
+        child: _selectedImage == null
+            ? CircularProgressIndicator()
+            : Image.file(_selectedImage!),
       ),
     );
   }
