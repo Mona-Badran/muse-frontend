@@ -30,7 +30,10 @@ class _CameraPageState extends State<CameraPage> {
     setState(() {
       _selectedImage = File(returnedImage.path);
     });
+    await _uploadImageToServer();
   }
+
+  Future<void> _uploadImageToServer() async {}
 
   @override
   Widget build(BuildContext context) {
