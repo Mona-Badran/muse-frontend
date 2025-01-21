@@ -21,7 +21,7 @@ class _CameraPageState extends State<CameraPage> {
     _pickImageFromCamera();
   }
 
-  Future _pickImageFromCamera() async {
+  Future<void> _pickImageFromCamera() async {
     final XFile? returnedImage = await ImagePicker().pickImage(source: ImageSource.camera);
 
     if (returnedImage == null) {
@@ -31,8 +31,9 @@ class _CameraPageState extends State<CameraPage> {
     final savedImagePath = await _saveImageLocally(File(returnedImage.path));
 
     setState(() {
-      _selectedImage  = File(savedImagePath);
+      _selectedImage = File(savedImagePath);
     });
+    await _uploadImage(File(savedImagePath));
   }
 
   Future<String> _saveImageLocally(File imageFile) async {
@@ -47,6 +48,36 @@ class _CameraPageState extends State<CameraPage> {
     return savedImage.path;
   }
 
+  Future<void> _uploadImage(File imageFile) async {
+    var request = http.MultipartRequest(
+      'POST',
+      Uri.parse('$BASE_URL/artwork/upload'),  // Replace with your actual backend URL
+    );
+
+    request.files.add(
+      await http.MultipartFile.fromPath('image', imageFile.path),
+    );
+
+    try {
+      var response = await request.send();
+      if (response.statusCode == 200) {
+        print("Image uploaded successfully!");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Image uploaded successfully!")),
+        );
+      } else {
+        print("Image upload failed: ${response.statusCode}");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Failed to upload image")),
+        );
+      }
+    } catch (e) {
+      print("Error uploading image: $e");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Error uploading image")),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
