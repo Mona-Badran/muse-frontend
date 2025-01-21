@@ -43,6 +43,9 @@ class _CameraPageState extends State<CameraPage> {
       final url = Uri.parse('$BASE_URL/artwork/upload');
       var request = http.MultipartRequest('POST', url);
       request.files.add(await http.MultipartFile.fromPath('image', _selectedImage!.path));
+
+      var response = await request.send();
+
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
