@@ -49,6 +49,7 @@ class _CameraPageState extends State<CameraPage> {
           'image',
           _selectedImage!.path,
       ));
+      request.fields['user_id'] = _userId.toString();
 
       var response = await request.send();
 
