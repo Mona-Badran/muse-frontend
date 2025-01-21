@@ -39,6 +39,7 @@ class _CameraPageState extends State<CameraPage> {
     setState(() {
       _isUploading = true;
     });
+    try {} catch (e) {}
   }
 
   @override
