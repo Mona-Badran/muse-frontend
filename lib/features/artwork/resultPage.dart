@@ -23,7 +23,7 @@ class ResultPage extends StatelessWidget {
             ArchImage(
               imagePath: imageUrl.startsWith('http')
                   ? imageUrl
-                  : '$BASE_URL$imageUrl',  // Use BASE_URL for production URLs
+                  : '$BASE_URL$imageUrl',
               width: double.infinity,
               height: 200,
             ),
