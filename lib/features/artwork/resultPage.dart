@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../config.dart';
+import '../../shared/archImage.dart';
 import '../../shared/customAppBar.dart';
-
 class ResultPage extends StatelessWidget {
   final String imageUrl;
 
@@ -18,7 +19,15 @@ class ResultPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [],
+          children: [
+            ArchImage(
+              imagePath: imageUrl.startsWith('http')
+                  ? imageUrl
+                  : '$BASE_URL$imageUrl',  // Use BASE_URL for production URLs
+              width: double.infinity,
+              height: 200,
+            ),
+          ],
         ),
       ),
     );
