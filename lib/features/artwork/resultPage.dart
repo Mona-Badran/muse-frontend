@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Resultpage extends StatefulWidget {
-  const Resultpage({super.key, required String imageUrl});
+class ResultPage extends StatelessWidget {
+  final String imageUrl;
 
-  @override
-  State<Resultpage> createState() => _ResultpageState();
-}
+  const ResultPage({super.key, required this.imageUrl});
 
-class _ResultpageState extends State<Resultpage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+    return Scaffold();
 }
