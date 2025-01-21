@@ -35,6 +35,10 @@ class _CameraPageState extends State<CameraPage> {
 
   Future<void> _uploadImageToServer() async {
     if (_selectedImage == null) return;
+
+    setState(() {
+      _isUploading = true;
+    });
   }
 
   @override
