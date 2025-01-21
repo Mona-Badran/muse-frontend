@@ -39,7 +39,15 @@ class _CameraPageState extends State<CameraPage> {
     setState(() {
       _isUploading = true;
     });
-    try {} catch (e) {}
+    try {} catch (error) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Error uploading image: $error"),
+          backgroundColor: Colors.red,
+        ),
+      );
+
+    }
   }
 
   @override
