@@ -46,6 +46,16 @@ class _CameraPageState extends State<CameraPage> {
 
       var response = await request.send();
 
+      if (response.statusCode == 201) {
+        final responseData = await response.stream.bytesToString();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Image uploaded successfully!"),
+            backgroundColor: Colors.green,
+          ),
+        );
+      }
+
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
