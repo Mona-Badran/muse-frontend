@@ -12,7 +12,19 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   File? _selectedImage;
 
-   @override
+  Future _pickImageFromCamera() async {
+    final returnedImage =
+    await ImagePicker().pickImage(source: ImageSource.camera);
+
+    if (returnedImage == null) {
+      return;
+    }
+    setState(() {
+      _selectedImage = File(returnedImage.path);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return _selectedImage != null
         ? Image.file(_selectedImage!)
