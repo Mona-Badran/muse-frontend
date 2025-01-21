@@ -30,6 +30,19 @@ class _CameraPageState extends State<CameraPage> {
     });
   }
 
+  Future<String> _saveImageLocally(File imageFile) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final capturedFolder = Directory('${directory.path}/captured');
+    if (!await capturedFolder.exists()) {
+      await capturedFolder.create(recursive: true);
+    }
+    final String newPath = '${capturedFolder.path}/${DateTime.now().millisecondsSinceEpoch}.jpg';
+    final savedImage = await imageFile.copy(newPath);
+    print("Image saved at: ${savedImage.path}");
+    return savedImage.path;
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return _selectedImage != null
