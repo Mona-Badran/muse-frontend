@@ -19,12 +19,12 @@ class _CameraPageState extends State<CameraPage> {
   }
 
   Future _pickImageFromCamera() async {
-    final returnedImage =
-    await ImagePicker().pickImage(source: ImageSource.camera);
+    final XFile? returnedImage = await ImagePicker().pickImage(source: ImageSource.camera);
 
     if (returnedImage == null) {
       return;
     }
+
     setState(() {
       _selectedImage = File(returnedImage.path);
     });
