@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import '../../config.dart';
 
 class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
@@ -12,6 +13,7 @@ class CameraPage extends StatefulWidget {
 
 class _CameraPageState extends State<CameraPage> {
   File? _selectedImage;
+  bool _isUploading = false;
 
   @override
   void initState() {
