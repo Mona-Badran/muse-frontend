@@ -39,7 +39,11 @@ class _CameraPageState extends State<CameraPage> {
     setState(() {
       _isUploading = true;
     });
-    try {} catch (error) {
+    try {
+      final url = Uri.parse('$BASE_URL/artwork/upload');
+      var request = http.MultipartRequest('POST', url);
+      request.files.add(await http.MultipartFile.fromPath('image', _selectedImage!.path));
+    } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text("Error uploading image: $error"),
