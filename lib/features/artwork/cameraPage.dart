@@ -64,19 +64,19 @@ class _CameraPageState extends State<CameraPage> {
         final responseData = await http.Response.fromStream(response);
         final Map<String, dynamic> responseJson = jsonDecode(responseData.body);
 
-        String imageUrl = responseJson['imageUrl'];
-        print("Image URL received: $imageUrl");
+        // String imageUrl = responseJson['imageUrl'];
+        // print("Image URL received: $imageUrl");
 
-        setState(() {
-          _selectedImage = null;
-        });
+        // setState(() {
+        //   _selectedImage = null;
+        // });
 
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ResultPage(imageUrl: imageUrl),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ResultPage(imageUrl: imageUrl),
+        //   ),
+        // );
       } else {
         print("Image upload failed: ${response.statusCode}");
         ScaffoldMessenger.of(context).showSnackBar(
